@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuggèreMiam - Trouvez des recettes délicieuses</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>SuggèreMiam</h1>
+        <p>Trouvez des recettes délicieuses en un instant!</p>
+    </header>
+    <main>
+        <div id="preferences">
+            <label for="cuisine">Cuisine préférée :</label>
+            <input type="text" id="cuisine" placeholder="Ex: Italienne">
+            <label for="ingredients">Ingrédients disponibles :</label>
+            <input type="text" id="ingredients" placeholder="Ex: Pâtes, Tomates, Fromage">
+            <button id="suggestButton">Suggérer des recettes</button>
+        </div>
+        <div id="suggestions">
+            <!-- Les suggestions de recettes seront affichées ici -->
+        </div>
+    </main>
+    <script>
+        const suggestButton = document.getElementById('suggestButton');
+    const cuisineInput = document.getElementById('cuisine');
+    const ingredientsInput = document.getElementById('ingredients');
+    const suggestionsDiv = document.getElementById('suggestions');
+    
+    
+    
+    suggestButton.addEventListener('click', () => {
+        const cuisine = cuisineInput.value;
+        const ingredients = ingredientsInput.value.split(',').map(item => item.trim());
+    
+        // Faire une requête AJAX vers le serveur
+        fetch('http://0.0.0.0:8000/get_suggestions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ cuisine, ingredients })
+        })
+        .then(response => response.json())
+        .then(data => {
+            const suggestions = data.suggestions;
+            suggestionsDiv.innerHTML = suggestions.map(recipe => `<p>${recipe}</p>`).join('');
+        })
+        .catch(error => {
+            console.error('Erreur de requête AJAX :', error);
+        });
+    });
+    // });
+    
+    </script>
+    
+</body>
+</html>
+
+
+

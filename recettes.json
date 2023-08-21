@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Pâtes Carbonara",
+        "cuisine": "italienne",
+        "ingredients": ["pâtes", "lardons", "œufs", "parmesan"]
+    },
+    {
+        "name": "Quiche Lorraine",
+        "cuisine": "française",
+        "ingredients": ["pâte brisée", "lardons", "œufs", "crème", "emmental"]
+    },
+    {
+        "name": "Spaghetti Bolognese",
+        "cuisine": "italienne",
+        "ingredients": ["spaghetti", "viande hachée", "sauce tomate", "oignon"]
+    },
+    {
+        "name": "Salade César",
+        "cuisine": "américaine",
+        "ingredients": ["laitue romaine", "poulet grillé", "croûtons", "parmesan", "sauce césar"]
+    },
+    {
+        "name": "Ratatouille",
+        "cuisine": "française",
+        "ingredients": ["aubergine", "courgette", "poivron", "tomate", "oignon", "ail"]
+    },
+    {
+        "name": "Tacos au poisson",
+        "cuisine": "mexicaine",
+        "ingredients": ["filet de poisson", "tortilla", "chou", "crème sure", "sauce piquante"]
+    },
+    {
+        "name": "Pâtes Carbonara",
+        "cuisine": "italienne",
+        "ingredients": ["pâtes", "lardons", "œufs", "parmesan"]
+    },
+    {
+        "name": "Quiche Lorraine",
+        "cuisine": "française",
+        "ingredients": ["pâte brisée", "lardons", "œufs", "crème", "emmental"]
+    },
+    {
+        "name": "Spaghetti Bolognese",
+        "cuisine": "italienne",
+        "ingredients": ["spaghetti", "viande hachée", "sauce tomate", "oignon"]
+    }
+]
